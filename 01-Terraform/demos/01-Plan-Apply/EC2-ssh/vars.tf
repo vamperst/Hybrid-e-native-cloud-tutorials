@@ -15,8 +15,8 @@ variable "KEY_NAME" {
   default = "vockey"
 }
 variable "PATH_TO_KEY" {
-  default = "/home/ubuntu/.ssh/fiap-lab.pem"
+  default = "/home/ubuntu/.ssh/vockey.pem"
 }
 variable "INSTANCE_USERNAME" {
-  default = "ubuntu"
+  default = "ec2-user"
 }
