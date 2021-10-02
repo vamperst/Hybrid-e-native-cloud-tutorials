@@ -1,7 +1,7 @@
 1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/demos/04-State/` para entrar na pasta do exercicío.'
 2. Entre na pasta 'S3' com o comando `cd S3`
 3. Execute o comando `terraform init`
-4. Utilizando o IDE altere o aquivo 's3.tf' que esta em 'Hybrid-e-native-cloud-tutorial/01-Terraform/demos/State/S3'. Coloque sua turma e seu rm noo locais indicados. Sem espaços e letras maiúsculas. Isso é necessário pois os nomes de buckets são unicos em toda a AWS não só em sua conta. 
+4. Utilizando o comando `c9 open s3.tf` abra o arquivo terraform que irá criar o bucket S3 on ficarão seus estados remotos. Coloque sua turma e seu rm no local indicado. Sem espaços e letras maiúsculas. Isso é necessário pois os nomes de buckets são unicos em toda a AWS não só em sua conta. 
 5. Execute o comando `terraform apply -auto-approve`
 6. Você acabou de criar o bucket que lhe servirá de estado remoto
 7. Saia da pasta com `cd ..`
