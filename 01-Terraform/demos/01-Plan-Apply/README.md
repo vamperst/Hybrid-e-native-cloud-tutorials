@@ -1,4 +1,4 @@
-1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/demos/01-Plan-Apply/` para entrar na pasta do exercício.
+1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/demos/01-Plan-Apply/` para entrar na pasta do exercício.
 2. Entre na pasta EC2 `cd EC2`
 3. Execute o comando `terraform init`
    ![init](images/terraforminit.png)
