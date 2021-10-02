@@ -1,4 +1,4 @@
-1. Execute o comando `cd ~/environment/hybridnativecloud-exercises-terraform/demos/Count/` para entrar no diretório do exercício.
+1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/demos/Count/` para entrar no diretório do exercício.
 2. Execute o comando `terraform init`
 3. Execute o comando `terraform apply -auto-approve`
 4. Aguarde alguns minutos para que todas as maquinas estejam prontas no ELB. Para chegar até o painel de Load Balancers, entre no serviço EC2 e no menu esquerdo escolha 'Load Balancers'
@@ -7,7 +7,7 @@
    ![inservice](images/inservice2.png)
 6. Utilize o dns do ELB fornecido como saida no terraform para colar no navegador e testar o funcoinamento da Stack
    ![nginx1](images/nginx1.png)
-7. Agora vá até o arquivo `main.tf`(hybridnativecloud-exercises-terraform/demos/Count) pelo IDE e altere o valor do count para 3
+7. Agora vá até o arquivo `main.tf`(Hybrid-e-native-cloud-tutorials/demos/Count) pelo IDE e altere o valor do count para 3
    ![countmod](images/countmod.png)
 8. Execute novamente o comando `terraform apply -auto-approve`
    ![apply2](images/apply2.png)

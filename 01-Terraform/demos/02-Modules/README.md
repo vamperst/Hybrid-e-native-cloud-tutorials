@@ -1,4 +1,4 @@
-1. Execute o comando `cd ~/environment/hybridnativecloud-exercises-terraform/demos/Modules/` para entrar na pasta do exercício.
+1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/demos/Modules/` para entrar na pasta do exercício.
 2. Entre na pasta vpc-call com o comando `cd vpc-call`
 3. Execute o comando `terraform init`
 4. Execute o comando `terraform plan`

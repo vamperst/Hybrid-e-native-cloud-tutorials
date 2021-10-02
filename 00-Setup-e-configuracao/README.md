@@ -43,3 +43,4 @@
 25. Cole o conteudo da chave privada copiado nos passos anteriores e cole no ide no aquivo labsuser.pem e salve utilizando "ctrl+S".
 26.  Execute o comando `chmod 400 ~/.ssh/labsuser.pem` para que a chave tenha a permissão correta.
 27.  Execute o comando `aws s3 cp ~/.ssh/labsuser.pem s3://base-config-<SEU RM>/instance-need/keys/` para copiar a chave que criou para o seu bucket de configurações do S3.
+28. Execute o comando a seguir para instalar o terraform `sh installTerraform.sh`
