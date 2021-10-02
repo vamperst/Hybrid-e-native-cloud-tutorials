@@ -57,7 +57,7 @@ resource "aws_elb" "web" {
 }
 
 resource "aws_instance" "web" {
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   ami           = "${lookup(var.aws_amis, var.aws_region)}"
 
   count = 2
