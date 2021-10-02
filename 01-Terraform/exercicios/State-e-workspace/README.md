@@ -1,8 +1,8 @@
 1. Execute o comando `~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/exercicios/State-e-workspace/` para entrar na pasta do exercício.
 2. Crie arquivos de configuração terraform para que crie:
    1. Um datasource de imagem AMI ([aws_ami](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami)) que pesquise a imagem ubuntu com os seguintes parametros:
-      1. Name = ubuntu/images/hvm-ssd/ubuntu-xenial-*
-      2. Owner = 099720109477
+      1. Name = amzn2-ami-hvm-2.0.202*-x86_64-gp2
+      2. Owners = amazon
       3. virtualization-type = hvm
       4. Mais recente
    2. 2 instancias ec2 t2.micro que irão utilizar a imagem do datasource do item 1
