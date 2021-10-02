@@ -1,4 +1,4 @@
-1. Execute o comando `cd ~/environment/senai-infra-as-code-terraform/exercicios/count/` para entrar na pasta do exercício.
+1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/exercicios/count/` para entrar na pasta do exercício.
 2. Crie um arquivo de terraform para criar filas sqs segundo a [documentação oficial](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue). Utilize apenas os atributos:
    1. Nome
    2. Tags

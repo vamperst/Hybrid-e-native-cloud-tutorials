@@ -1,4 +1,4 @@
-1. Execute o comando `cd ~/environment/senai-infra-as-code-terraform/exercicios/State-e-workspace/` para entrar na pasta do exercício.
+1. Execute o comando `~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/exercicios/State-e-workspace/` para entrar na pasta do exercício.
 2. Crie arquivos de configuração terraform para que crie:
    1. Um datasource de imagem AMI ([aws_ami](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami)) que pesquise a imagem ubuntu com os seguintes parametros:
       1. Name = ubuntu/images/hvm-ssd/ubuntu-xenial-*
