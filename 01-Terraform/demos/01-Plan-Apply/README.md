@@ -19,9 +19,9 @@
 15. Antes de executar o apply, abra uma aba no seu navegador e vá para o painel do EC2 na AWS. Basta Clicar em serviços e digitar EC2.
 16. No menu lateral esquerdo, clique em 'Security Groups' 
     ![](images/painelec2.png)
-17. Selecione o Security Group que tem 'default' na coluna Group Name. Vá a aba inbound e clique em 'Edit'
+17. Selecione o Security Group que tem 'default' na coluna Group Name. Vá a aba inbound e clique em 'Edit inbound Rules'
     ![](images/sgpainel.png)
-18. Altere o dropbox de Source para Anywhere como na imagem abaixo, e clique em save.
+18. Adicione mais uma regra que irá liberar todo o trafego TCP para `Anywhere` como na imagem abaixo e clique em `Salvar Regras`
     ![](images/anywhere.png)
 19. Se tudo estiver certo execute o comando `terraform apply -auto-approve` no terminal do Cloud9 que estava antes.
 20. Qunado o trabalho for concluido com sucesso, você pode pegar o dns da maquina criada que esta no final outputs do terraform e colocar no navegar que irá ser exibida uma pagina inicial do Nginx.
