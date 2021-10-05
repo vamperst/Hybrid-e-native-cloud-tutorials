@@ -1,6 +1,6 @@
 
 1. Execute o comando `cd ~/environment/Hybrid-e-native-cloud-tutorials/01-Terraform/demos/05-Workspaces/` para entrar na pasta do exercicío.
-2. Utilizando o IDE altere o arquivo state.tf que esta em 'Hybrid-e-native-cloud-tutorial/01-Terraform/demos/Workspaces' para adicionar o bucket para estado remoto que criou no ultimo módulo.
+2. tilize o comando `c9 open state.tf` para abrir o arquivo responsavel por configurar o estado remoto e adicione o nome do bucket criado na configuração.
 3. Execute o comando `terraform init` para inicializar o terraform. Caso tenha dado erro porque o nome do bucket esta incorreto você terá que apagar a pasta .terrafom com o comando `rm -rf .terraform`, arrumar o nome e executar novamente o init.
 4. Crie um novo workspace com o comando `terraform workspace new dev`
 5. Crie outro workspace com o comando `terraform workspace new prod`
