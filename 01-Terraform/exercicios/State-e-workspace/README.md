@@ -13,3 +13,7 @@
 6. Para verificar que o estado remoto esta funcionando, execute o comando `rm -rf .terraform` que ira apagar as cópias locais do estado e execute novamente o `terraform init`. Verifique dentro de cada workspace se o comando apply não cria nada.
    ![](img/teste-apply.png)
 7. Destrua as instancias em todos os workspaces
+
+
+### Dicas
+Como interpolar o nome do workspace no nome do recurso: [documentação](https://www.terraform.io/docs/language/state/workspaces.html#current-workspace-interpolation)
