@@ -1,14 +1,18 @@
 
-data "aws_subnet_ids" "vpc1" {
-  vpc_id = "${data.aws_vpc.vpc.id}"
-  tags = {
-    Tier = "Public"
+data "aws_subnets" "all" {
+  filter {
+    name   = "tag:Tier"
+    values = ["Public"]
+  }
+  filter {
+    name   = "vpc-id"
+    values = ["${data.aws_vpc.vpc.id}"]
   }
 }
 
 data "aws_subnet" "public" {
-  for_each = data.aws_subnet_ids.vpc1.ids
-  id = "${each.value}"
+  for_each = toset(data.aws_subnets.all.ids)
+  id       = each.value
 }
 
 resource "aws_route_table_association" "public_association" {

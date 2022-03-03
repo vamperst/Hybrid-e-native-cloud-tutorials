@@ -14,9 +14,6 @@ data "aws_internet_gateway" "igw" {
     values = ["${data.aws_vpc.vpc.id}"]
   }
 }
-data "aws_subnet_ids" "vpc" {
-  vpc_id = "${data.aws_vpc.vpc.id}"
-}
 
 variable "env" {
   default = "prod"
