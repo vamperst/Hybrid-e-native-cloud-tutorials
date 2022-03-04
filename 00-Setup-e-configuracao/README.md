@@ -40,7 +40,7 @@
 23. Copie o conteudo da chave privada para a area de transferência(Ctrl+C).
     ![](img/academy-pem-2.png)
 24. Execute o comando `c9 open ~/.ssh/vockey.pem` para criar o arquivo que utilizaremos como chave para entrar nas instancias. 
-25. Cole o conteudo da chave privada copiado nos passos anteriores e cole no ide no aquivo labsuser.pem e salve utilizando "ctrl+S".
+25. Cole o conteudo da chave privada copiado nos passos anteriores e cole no ide no aquivo vockey.pem e salve utilizando "ctrl+S".
 26.  Execute o comando `chmod 400 ~/.ssh/vockey.pem` para que a chave tenha a permissão correta.
 27.  Execute o comando `aws s3 cp ~/.ssh/vockey.pem s3://base-config-<SEU RM>/instance-need/keys/` para copiar a chave que criou para o seu bucket de configurações do S3.
 28. Execute o comando a seguir para instalar o terraform `sh installTerraform.sh`
