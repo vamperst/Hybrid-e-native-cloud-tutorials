@@ -45,7 +45,7 @@
 - name: Register runner to GitLab
   command: >
     {{ command }}
-    --registration-token '{{ lookup('aws_ssm', 'gitlab_runner_token', decrypt=False ) }}'
+    --registration-token 'SEU TOKEN VAI AQUI'
     {% if gitlab_runner.cache_s3_secret_key is defined %}
     --cache-s3-secret-key '{{ gitlab_runner.cache_s3_secret_key }}'
     {% endif %}

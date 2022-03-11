@@ -16,8 +16,3 @@ sudo apt install python3-apt -y
 sudo apt install python-apt-common -y
 sudo apt install awscli -y
 sudo apt install unzip -y
-
-
-sudo add-apt-repository --yes --update ppa:ansible/ansible -y
-sudo apt install ansible -y
-
