@@ -1,5 +1,8 @@
 
-
+resource "random_shuffle" "random_subnet" {
+  input        = [for s in data.aws_subnet.public : s.id]
+  result_count = 1
+}
 resource "aws_instance" "example" {
   count=1
   ami = "${lookup(var.AMIS, var.AWS_REGION)}"
@@ -7,6 +10,7 @@ resource "aws_instance" "example" {
   iam_instance_profile = "LabInstanceProfile"
   key_name = "${var.KEY_NAME}"
   security_groups = ["${aws_security_group.gitlab-runner-fleet.name}"]
+  subnet_id = "${random_shuffle.random_subnet.result[0]}"
 
   provisioner "file" {
     source      = "install-python.sh"

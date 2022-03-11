@@ -1,8 +1,14 @@
-data "aws_vpc" "vpc" {}
-# data "aws_subnet_ids" "all" {
-#   vpc_id = "${data.aws_vpc.vpc.id}"
-# }
+data "aws_vpc" "vpc" {
+  tags = {
+    Name = "${var.project}"
+  }
+}
+
 data "aws_subnets" "all" {
+  filter {
+    name   = "tag:Tier"
+    values = ["Public"]
+  }
   filter {
     name   = "vpc-id"
     values = ["${data.aws_vpc.vpc.id}"]

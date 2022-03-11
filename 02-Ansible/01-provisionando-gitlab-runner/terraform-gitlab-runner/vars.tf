@@ -10,7 +10,9 @@ variable "AMIS" {
     eu-west-1 = "ami-844e0bf7"
   }
 }
-
+variable "project" {
+  default = "fiap-lab"
+}
 variable "KEY_NAME" {
   default = "vockey"
 }
