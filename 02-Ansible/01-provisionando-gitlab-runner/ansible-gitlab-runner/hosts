@@ -1,0 +1,9 @@
+[runner]
+gitlab-runner-1 ansible_host=3.93.37.24
+gitlab-fleet-1 ansible_host=44.192.123.33
+gitlab-fleet-2 ansible_host=3.238.32.172
+gitlab-fleet-3 ansible_host=44.192.37.106
+
+[all:vars]
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/vockey.pem
+ansible_become=true
