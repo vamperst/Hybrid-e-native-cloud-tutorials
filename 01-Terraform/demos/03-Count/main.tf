@@ -13,18 +13,22 @@ data "aws_vpc" "vpc" {
   }
 }
 
-data "aws_subnet_ids" "all" {
-  vpc_id = "${data.aws_vpc.vpc.id}"
-
-  tags = {
-    Tier = "Public"
+data "aws_subnets" "all" {
+  filter {
+    name   = "tag:Tier"
+    values = ["Public"]
+  }
+  filter {
+    name   = "vpc-id"
+    values = ["${data.aws_vpc.vpc.id}"]
   }
 }
 
 data "aws_subnet" "public" {
-  for_each = data.aws_subnet_ids.all.ids
-  id = "${each.value}"
+  for_each = toset(data.aws_subnets.all.ids)
+  id       = each.value
 }
+
 
 resource "random_shuffle" "random_subnet" {
   input        = [for s in data.aws_subnet.public : s.id]
@@ -34,7 +38,7 @@ resource "random_shuffle" "random_subnet" {
 resource "aws_elb" "web" {
   name = "terraform-example-elb"
 
-  subnets         = data.aws_subnet_ids.all.ids
+  subnets         = data.aws_subnets.all.ids
   security_groups = ["${aws_security_group.allow-ssh.id}"]
 
   listener {
