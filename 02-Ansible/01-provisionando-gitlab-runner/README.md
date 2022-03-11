@@ -88,4 +88,6 @@ git push -u origin master
 ``` shell
 ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u 'ubuntu' -i hosts  --extra-vars 'gitlab_runner_name=gitlab-runner-fleet-001' play.yaml    
 ```
-    
+![](img/gitlab-14.png)
+22. Se voltar a mesma página do gitlab onde pegou o token notará que agora tem um runner registrado.
+![](img/gitlab-13.png)
