@@ -7,6 +7,8 @@ python3.8 --version
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 python --version
 
+sudo apt install python3-apt
+
 sudo add-apt-repository --yes --update ppa:ansible/ansible -y
 sudo apt install ansible -y
 

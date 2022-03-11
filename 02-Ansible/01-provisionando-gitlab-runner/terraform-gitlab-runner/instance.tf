@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   iam_instance_profile = "LabInstanceProfile"
   key_name = "${var.KEY_NAME}"
-  security_groups = ["${aws_security_group.gitlab-runner-fleet.name}"]
+  security_groups = ["${aws_security_group.gitlab-runner-fleet.id}"]
   subnet_id = "${random_shuffle.random_subnet.result[0]}"
 
   provisioner "file" {
