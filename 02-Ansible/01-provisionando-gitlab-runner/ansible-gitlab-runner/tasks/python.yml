@@ -11,6 +11,11 @@
   copy:
     src: requirements.txt
     dest: /home/ubuntu/venv/requirements.txt
+- name: copying file requirements-global with playbook
+  become: true 
+  copy:
+    src: requirements-global.txt
+    dest: /home/ubuntu/requirements-global.txt
 - name: Create Python3-virtual requirements.txt
   command: touch /home/ubuntu/venv/requirements.txt
   args:
@@ -20,6 +25,7 @@
     virtualenv: /home/ubuntu/venv
     virtualenv_python: python3.8
     requirements: /home/ubuntu/venv/requirements.txt
+- 
 - name: Install python reqs globally
   pip: 
-    requirements: /home/ubuntu/venv/requirements.txt
+    requirements: /home/ubuntu/requirements-global.txt
