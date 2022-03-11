@@ -15,11 +15,11 @@
   command: touch /home/ubuntu/venv/requirements.txt
   args:
     creates: /home/ubuntu/venv/requirements.txt
-- name: Install python reqs globally
-  pip: 
-    requirements: /home/ubuntu/venv/requirements.txt
 - name: create virtual env
   pip: 
     virtualenv: /home/ubuntu/venv
     virtualenv_python: python3.8
+    requirements: /home/ubuntu/venv/requirements.txt
+- name: Install python reqs globally
+  pip: 
     requirements: /home/ubuntu/venv/requirements.txt
