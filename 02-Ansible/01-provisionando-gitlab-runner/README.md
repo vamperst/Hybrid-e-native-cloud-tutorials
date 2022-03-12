@@ -57,7 +57,7 @@ cp -frv /home/ubuntu/environment/Hybrid-e-native-cloud-tutorials/02-Ansible/01-p
 cd /home/ubuntu/environment/primeiro-projeto
 
 git init --initial-branch=master
-git remote add origin git@gitlab.com:vamperst/primeiro-projeto.git
+git remote add origin git@gitlab.com:SEU NOME DE USUARIO/primeiro-projeto.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
